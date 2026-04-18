@@ -1,217 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Indel Bioinnovations</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-white text-slate-900">
-
-<!-- Background -->
-<div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.14),transparent_36%),radial-gradient(circle_at_80%_10%,rgba(37,99,235,0.10),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)]"></div>
-
-<!-- Header -->
-<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-xl">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-    <div>
-      <div class="font-semibold text-lg">Indel Bioinnovations</div>
-      <div class="text-xs uppercase tracking-widest text-sky-600">
-        Changing the cancer treatment paradigm
-      </div>
+function Stat({ label, value, subtext }) {
+  return (
+    <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-600">{label}</div>
+      <div className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{value}</div>
+      {subtext ? <div className="mt-2 text-sm leading-6 text-slate-600">{subtext}</div> : null}
     </div>
+  );
+}
 
-    <nav class="hidden md:flex gap-8 text-sm text-slate-600">
-      <a href="#science">Science</a>
-      <a href="#data">Data</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-16">
-
-  <div>
-    <div class="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-full text-xs uppercase tracking-widest text-sky-600 bg-white shadow-sm">
-      Oncology gene therapy platform
+function TeamCard({ name, role, bio, note }) {
+  return (
+    <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+      <div className="text-xl font-semibold text-slate-900">{name}</div>
+      <div className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-sky-600">{role}</div>
+      <p className="mt-4 text-sm leading-7 text-slate-600">{bio}</p>
+      {note ? <div className="mt-4 text-xs font-medium uppercase tracking-[0.18em] text-slate-400">{note}</div> : null}
     </div>
+  );
+}
 
-    <h1 class="mt-8 text-5xl lg:text-6xl font-semibold leading-tight tracking-tight">
-      Developing a novel TP53 gene therapy to change the cancer treatment paradigm
-    </h1>
-
-    <p class="mt-8 text-lg text-slate-600 max-w-xl leading-relaxed">
-      Indel Bioinnovations is building a non-viral gene therapy designed to restore functional TP53 activity in cancer cells, beginning with triple-negative breast cancer and expanding across oncology.
-    </p>
-
-    <div class="mt-10 flex gap-4">
-      <a href="#science" class="bg-slate-900 text-white px-6 py-3 rounded-xl shadow hover:scale-[1.02] transition">
-        Explore the science
-      </a>
-      <a href="#data" class="border border-slate-200 px-6 py-3 rounded-xl bg-white hover:bg-slate-50 transition">
-        View key data
-      </a>
+function SectionHeader({ eyebrow, title, body }) {
+  return (
+    <div className="max-w-3xl">
+      <div className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-600">{eyebrow}</div>
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
+      {body ? <p className="mt-6 text-base leading-8 text-slate-600">{body}</p> : null}
     </div>
+  );
+}
 
-    <div class="mt-12 grid grid-cols-3 gap-4">
-      <div class="bg-white border rounded-2xl p-4 shadow-sm">
-        <div class="text-xs text-sky-600 uppercase">Indication</div>
-        <div class="font-semibold mt-1">TNBC</div>
-      </div>
-
-      <div class="bg-white border rounded-2xl p-4 shadow-sm">
-        <div class="text-xs text-sky-600 uppercase">Preclinical</div>
-        <div class="font-semibold mt-1">~75%</div>
-      </div>
-
-      <div class="bg-white border rounded-2xl p-4 shadow-sm">
-        <div class="text-xs text-sky-600 uppercase">IND Target</div>
-        <div class="font-semibold mt-1">2028</div>
-      </div>
+function DataCard({ title, body }) {
+  return (
+    <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm">
+      <div className="text-lg font-semibold text-slate-900">{title}</div>
+      <p className="mt-4 text-sm leading-7 text-slate-600">{body}</p>
     </div>
-  </div>
+  );
+}
 
-  <div class="bg-white border rounded-3xl p-8 shadow-[0_30px_80px_rgba(0,0,0,0.06)]">
-    <div class="text-sm uppercase tracking-widest text-sky-600">
-      Why TP53 matters
+export default function IndelWebsite() {
+  const sections = [
+    { id: 'science', label: 'Science' },
+    { id: 'data', label: 'Data' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'team', label: 'Team' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
+  const coreTeam = [
+    {
+      name: 'Peyton Jackson',
+      role: 'CEO',
+      bio: 'Leads company strategy, fundraising, and execution. Background in genetics and biotechnology with early operating experience building the company and shaping its translational direction.',
+      note: 'Core Team',
+    },
+    {
+      name: 'Jared Wieland',
+      role: 'CSO',
+      bio: 'Leads scientific strategy and preclinical development. Brings years of lab experience and drug design training to Indel’s therapeutic development efforts.',
+      note: 'Core Team',
+    },
+    {
+      name: 'Jared Barrott, PhD',
+      role: 'Scientific Advisor',
+      bio: 'Professor at BYU and former Huntsman Cancer Institute postdoctoral researcher. Guides scientific rigor, translational direction, and oncology program development.',
+      note: 'Core Team',
+    },
+  ];
+
+  const advisors = [
+    {
+      name: 'Greg Kunst',
+      role: 'Business Advisor',
+      bio: 'Supports company building, commercialization strategy, and growth planning with deep operating experience in biotech company formation and scale-up.',
+      note: 'Advisor',
+    },
+    {
+      name: 'Laurens Bockheart',
+      role: 'Business Advisor',
+      bio: 'Provides strategic guidance on financing, company development, and execution as the business matures.',
+      note: 'Advisor',
+    },
+    {
+      name: 'Jon Sparks, PhD, JD',
+      role: 'IP Advisor',
+      bio: 'Partner at McCarter & English who advises on intellectual property strategy, protection, and positioning around the platform.',
+      note: 'Advisor',
+    },
+  ];
+
+  const employees = [
+    {
+      name: 'Will Penrod',
+      role: 'Team Member',
+      bio: 'Supports company operations and execution across Indel’s growing scientific and strategic efforts.',
+      note: 'Employee',
+    },
+    {
+      name: 'Spencer Nadauld',
+      role: 'Research Assistant',
+      bio: 'Supports core research activities, experimental execution, and preclinical development work across the platform.',
+      note: 'Employee',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.14),transparent_36%),radial-gradient(circle_at_80%_10%,rgba(37,99,235,0.10),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)]" />
+
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <div>
+            <div className="text-lg font-semibold tracking-wide text-slate-900">Indel Bioinnovations</div>
+            <div className="text-[11px] uppercase tracking-[0.32em] text-sky-600">Changing the cancer treatment paradigm</div>
+          </div>
+          <nav className="hidden items-center gap-6 md:flex">
+            {sections.map((section) => (
+              <a key={section.id} href={`#${section.id}`} className="text-sm text-slate-600 transition hover:text-slate-900">
+                {section.label}
+              </a>
+            ))}
+            <a href="#contact" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:shadow">
+              Connect
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-32">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-sky-600 shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-sky-500" />
+                Oncology gene therapy platform
+              </div>
+              <h1 className="mt-7 text-5xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-6xl">
+                Developing a novel TP53 gene therapy to change the cancer treatment paradigm
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+                Indel Bioinnovations is building a non-viral gene therapy designed to reintroduce functional TP53 copies into cancer cells, beginning with triple-negative breast cancer and expanding into additional high-need oncology settings.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a href="#science" className="rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:scale-[1.01]">
+                  Explore the science
+                </a>
+                <a href="#data" className="rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50">
+                  View key data
+                </a>
+              </div>
+              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                <Stat label="Lead Indication" value="TNBC" subtext="Triple-negative breast cancer" />
+                <Stat label="Preclinical Signal" value="~75%" subtext="Tumor growth inhibition in TNBC xenograft models" />
+                <Stat label="IND Goal" value="2028" subtext="Lead program advancing toward IND" />
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -left-10 top-10 h-28 w-28 rounded-full bg-sky-100 blur-3xl" />
+              <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-blue-100 blur-3xl" />
+              <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_30px_80px_rgba(15,23,42,0.06)]">
+                <div className="rounded-[28px] border border-slate-200 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.12),transparent_35%),linear-gradient(180deg,#ffffff,#f8fafc)] p-8">
+                  <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Why TP53 matters</div>
+                  <div className="mt-3 text-2xl font-semibold tracking-tight text-slate-900">A tumor suppressor strategy built around one of cancer biology’s central failure points</div>
+                  <div className="mt-8 space-y-4">
+                    {[
+                      'TP53 encodes p53, often called the guardian of the genome',
+                      'Mutated in more than 50% of human cancers and silenced across many others',
+                      'Functional TP53 restoration can trigger apoptosis, halt the cell cycle, or reestablish key checkpoints',
+                      'Initial focus is TNBC, with preliminary efficacy signals observed in additional cancer types',
+                    ].map((item, idx) => (
+                      <div key={item} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm">
+                        <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-sky-50 text-sm font-semibold text-sky-700">0{idx + 1}</div>
+                        <div className="text-sm leading-6 text-slate-700">{item}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="science" className="border-t border-slate-200 bg-slate-50/70">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <SectionHeader
+              eyebrow="Science"
+              title="A broader cancer biology story, not just a delivery story"
+              body="Indel’s thesis centers on restoring functional TP53 in cancer cells. Rather than positioning the company around delivery mechanics alone, the scientific narrative focuses on reestablishing core tumor suppressor function in cancers where those safeguards have been lost."
+            />
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              <DataCard title="The TNBC problem" body="Triple-negative breast cancer remains a high-need setting with limited targeted treatment options and a standard of care still anchored in chemotherapy, with or without checkpoint inhibition." />
+              <DataCard title="The solution" body="Indel is developing a non-viral TP53 gene therapy designed to reintroduce functional TP53 copies into cancer cells and restore the biology that normally prevents damaged cells from dividing." />
+              <DataCard title="Why it matters" body="If functional TP53 is restored, cancer cells may undergo apoptosis, halt cell-cycle progression, or recover key checkpoint controls that suppress malignant growth." />
+            </div>
+          </div>
+        </section>
+
+        <section id="data" className="border-t border-slate-200 bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <SectionHeader
+              eyebrow="Data & Opportunity"
+              title="Early proof of concept with a large downstream opportunity"
+              body="The deck supports a story that combines compelling early efficacy, a broad biologic rationale, and meaningful commercial expansion potential."
+            />
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+              <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm">
+                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Preclinical proof of concept</div>
+                <div className="mt-4 text-4xl font-semibold tracking-tight text-slate-900">~75% tumor growth inhibition</div>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+                  In TNBC xenograft models in vivo following Indel-53 treatment, the deck highlights approximately 75% tumor growth inhibition, consistent response across animals, and early signals in five additional cancer types.
+                </p>
+              </div>
+
+              <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm">
+                <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Market sizing & indication strategy</div>
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  <Stat label="SAM" value="$10B–13B" subtext="TNBC, cervical, synovial, T-cell leukemia" />
+                  <Stat label="SOM" value="$200–300M" subtext="Initial US/EU TNBC opportunity" />
+                  <Stat label="TP53-mutant cancers" value="~10M" subtext="Estimated global annual patient population" />
+                  <Stat label="TNBC incidence" value="~275K" subtext="Target starting patient population" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-6 lg:grid-cols-4">
+              <DataCard title="2023 market" body="Baseline TNBC market estimated around $1.0–1.2B." />
+              <DataCard title="2025–26 market" body="Current TNBC market estimated around $1.2–1.5B." />
+              <DataCard title="2030 outlook" body="Mid-forecast estimate around $1.8–2.2B." />
+              <DataCard title="2034 outlook" body="Projected TNBC market around $2.5–3.0B with approximately 4.7–5% CAGR." />
+            </div>
+          </div>
+        </section>
+
+        <section id="timeline" className="border-t border-slate-200 bg-slate-50/70">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <SectionHeader
+              eyebrow="Development Timeline"
+              title="Lead program advancing toward IND with expansion beyond TNBC"
+              body="The deck frames TNBC as the lead entry point, with cancer subtype expansion following, and an IND objective in 2028 anchored by validation, safety, and manufacturing milestones."
+            />
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-4">
+              <DataCard title="Discovery" body="TP53 expression restored, in vitro TNBC efficacy established, and first in vivo efficacy demonstrated." />
+              <DataCard title="Preclinical" body="Xenograft efficacy, advanced model validation, dose and durability work, and PK/PD plus safety studies." />
+              <DataCard title="IND-enabling" body="GLP tox studies, CMC and GMP preparation, pre-IND engagement, and lead candidate selection." />
+              <DataCard title="Clinical path" body="IND submission target by 2028, followed by Phase 1 development and broader cancer subtype expansion." />
+            </div>
+          </div>
+        </section>
+
+        <section id="team" className="border-t border-slate-200 bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <SectionHeader
+              eyebrow="Team"
+              title="The people behind Indel"
+              body="The website now reflects the full group shaping the company: founders, scientific leadership, advisors, and operating team members."
+            />
+
+            <div className="mt-12">
+              <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Core Team</div>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {coreTeam.map((person) => (
+                  <TeamCard key={person.name} {...person} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-14">
+              <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Advisors</div>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {advisors.map((person) => (
+                  <TeamCard key={person.name} {...person} />
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-14">
+              <div className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Employees</div>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {employees.map((person) => (
+                  <TeamCard key={person.name} {...person} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="border-t border-slate-200 bg-slate-50/70">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+              <div>
+                <SectionHeader
+                  eyebrow="Contact"
+                  title="Partner with Indel Bioinnovations"
+                  body="Indel is seeking conversations with investors, scientific collaborators, and strategic partners aligned with a new therapeutic approach to cancer treatment."
+                />
+              </div>
+              <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                <div className="text-lg font-semibold text-slate-900">Get in touch</div>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  For partnership, investor, or scientific inquiries, reach out to the Indel team.
+                </p>
+                <div className="mt-6 space-y-3 text-sm text-slate-700">
+                  <div><span className="text-slate-500">Company:</span> Indel Bioinnovations</div>
+                  <div><span className="text-slate-500">Email:</span> contact@indelbioinnovations.com</div>
+                  <div><span className="text-slate-500">Phone:</span> 385-441-6287</div>
+                  <div><span className="text-slate-500">Lead program:</span> TP53 gene therapy for TNBC</div>
+                </div>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a href="mailto:contact@indelbioinnovations.com" className="inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.01]">
+                    Email the team
+                  </a>
+                  <a href="tel:3854416287" className="inline-flex rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50">
+                    Call Indel
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div>© 2026 Indel Bioinnovations. All rights reserved.</div>
+          <div>Novel TP53 gene therapy for high-need oncology indications.</div>
+        </div>
+      </footer>
     </div>
-
-    <div class="mt-3 text-2xl font-semibold">
-      A central failure point in cancer biology
-    </div>
-
-    <ul class="mt-8 space-y-4 text-slate-600">
-      <li>TP53 encodes p53, the “guardian of the genome”</li>
-      <li>Mutated in over 50% of cancers</li>
-      <li>Restoration may trigger apoptosis and cell-cycle arrest</li>
-      <li>Initial focus: TNBC with broader expansion potential</li>
-    </ul>
-  </div>
-
-</section>
-
-<!-- SCIENCE -->
-<section id="science" class="bg-slate-50 py-24 border-t">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-4xl font-semibold">Science</h2>
-
-    <p class="mt-6 text-slate-600 max-w-2xl">
-      Indel’s approach focuses on restoring tumor suppressor function rather than targeting downstream effects of cancer biology.
-    </p>
-
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-
-      <div class="bg-white p-6 rounded-2xl shadow-sm border">
-        <h3 class="font-semibold">The problem</h3>
-        <p class="mt-3 text-sm text-slate-600">
-          TNBC lacks targeted therapies and relies heavily on chemotherapy.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl shadow-sm border">
-        <h3 class="font-semibold">The solution</h3>
-        <p class="mt-3 text-sm text-slate-600">
-          Reintroducing functional TP53 into cancer cells.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-2xl shadow-sm border">
-        <h3 class="font-semibold">The outcome</h3>
-        <p class="mt-3 text-sm text-slate-600">
-          Apoptosis, cell-cycle arrest, and restored checkpoints.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- DATA -->
-<section id="data" class="py-24 border-t">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-4xl font-semibold">Data & Opportunity</h2>
-
-    <div class="grid md:grid-cols-2 gap-8 mt-12">
-
-      <div class="bg-white border rounded-3xl p-8 shadow-sm">
-        <div class="text-sm text-sky-600 uppercase">Preclinical</div>
-        <div class="text-4xl font-semibold mt-2">~75%</div>
-        <p class="mt-4 text-slate-600 text-sm">
-          Tumor growth inhibition in TNBC xenograft models.
-        </p>
-      </div>
-
-      <div class="bg-white border rounded-3xl p-8 shadow-sm">
-        <div class="text-sm text-sky-600 uppercase">Market</div>
-        <div class="text-4xl font-semibold mt-2">$10B+</div>
-        <p class="mt-4 text-slate-600 text-sm">
-          Across TNBC and related cancer indications.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="py-24 border-t bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-4xl font-semibold">Team</h2>
-
-    <div class="mt-12 grid md:grid-cols-3 gap-6">
-
-      <div class="border rounded-2xl p-6 shadow-sm">
-        <div class="font-semibold">Peyton Jackson</div>
-        <div class="text-sm text-sky-600">CEO</div>
-      </div>
-
-      <div class="border rounded-2xl p-6 shadow-sm">
-        <div class="font-semibold">Jared Wieland</div>
-        <div class="text-sm text-sky-600">CSO</div>
-      </div>
-
-      <div class="border rounded-2xl p-6 shadow-sm">
-        <div class="font-semibold">Jared Barrott</div>
-        <div class="text-sm text-sky-600">Scientific Advisor</div>
-      </div>
-
-      <div class="border rounded-2xl p-6 shadow-sm">Greg Kunst</div>
-      <div class="border rounded-2xl p-6 shadow-sm">Laurens Bockheart</div>
-      <div class="border rounded-2xl p-6 shadow-sm">Jon Sparks</div>
-
-      <div class="border rounded-2xl p-6 shadow-sm">Will Penrod</div>
-      <div class="border rounded-2xl p-6 shadow-sm">Spencer Nadauld</div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="bg-slate-50 py-24 border-t">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-4xl font-semibold">Contact</h2>
-
-    <div class="mt-6 text-slate-600">
-      <p>Email: contact@indelbioinnovations.com</p>
-      <p>Phone: 385-441-6287</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t py-8 text-center text-sm text-slate-500">
-  © 2026 Indel Bioinnovations
-</footer>
-
-</body>
-</html>
+  );
+}
