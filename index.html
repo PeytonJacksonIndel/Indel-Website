@@ -89,85 +89,127 @@
           <div class="absolute -left-10 top-10 h-28 w-28 rounded-full bg-sky-100 blur-3xl"></div>
           <div class="absolute right-0 top-0 h-36 w-36 rounded-full bg-blue-100 blur-3xl"></div>
 
-          <!-- ========================================================= -->
-          <!-- =================== WHY TP53 MATTERS ==================== -->
-          <!-- ===== Edit only this block if you want to change it ===== -->
-          <!-- ========================================================= -->
-          <div class="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_30px_80px_rgba(15,23,42,0.06)]">
-            <div class="rounded-[28px] border border-slate-200 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.12),transparent_35%),linear-gradient(180deg,#ffffff,#f8fafc)] p-8">
-              <div class="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Why TP53 matters</div>
-              <div class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">
-                A tumor suppressor strategy built around one of cancer biology’s central failure points
-              </div>
+<!-- ========================================================= -->
+<!-- =================== WHY TP53 MATTERS ==================== -->
+<!-- ========================================================= -->
+<div class="relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_30px_80px_rgba(15,23,42,0.06)]">
+  <div class="rounded-[28px] border border-slate-200 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.12),transparent_35%),linear-gradient(180deg,#ffffff,#f8fafc)] p-8">
+    <div class="text-sm font-semibold uppercase tracking-[0.22em] text-sky-600">Why TP53 matters</div>
+    <div class="mt-3 text-2xl font-semibold tracking-tight text-slate-900">
+      A tumor suppressor strategy built around one of cancer biology’s central failure points
+    </div>
 
-              <style>
-                .tp53-row {
-                  display: flex;
-                  align-items: center;
-                  gap: 20px;
-                  border: 1px solid rgb(226 232 240);
-                  background: white;
-                  border-radius: 1rem;
-                  padding: 24px;
-                  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
-                }
+    <style>
+      .tp53-stack {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-                .tp53-badge {
-                  width: 56px;
-                  height: 56px;
-                  min-width: 56px;
-                  min-height: 56px;
-                  display: grid;
-                  place-items: center;
-                  border-radius: 9999px;
-                  border: 1px solid rgb(226 232 240);
-                  background: rgb(240 249 255);
-                  color: rgb(3 105 161);
-                  font-size: 18px;
-                  font-weight: 600;
-                  line-height: 1;
-                  flex: none;
-                  box-sizing: border-box;
-                }
+      .tp53-row {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        align-items: center;
+        gap: 24px;
+        border: 1px solid rgb(226 232 240);
+        background: white;
+        border-radius: 24px;
+        padding: 24px 28px;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+      }
 
-                .tp53-copy {
-                  font-size: 16px;
-                  line-height: 1.75;
-                  color: rgb(51 65 85);
-                }
-              </style>
+      .tp53-badge-wrap {
+        width: 64px;
+        display: flex;
+        justify-content: center;
+      }
 
-              <div class="mt-8 space-y-4">
-                <div class="tp53-row">
-                  <div class="tp53-badge">01</div>
-                  <div class="tp53-copy">
-                    TP53 encodes p53, often called the guardian of the genome
-                  </div>
-                </div>
+      .tp53-badge {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        border: 1px solid rgb(226 232 240);
+        background: rgb(240 249 255);
+        color: rgb(3 105 161);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        aspect-ratio: 1 / 1;
+      }
 
-                <div class="tp53-row">
-                  <div class="tp53-badge">02</div>
-                  <div class="tp53-copy">
-                    Mutated in more than 50% of human cancers and silenced across many others
-                  </div>
-                </div>
+      .tp53-copy {
+        font-size: 16px;
+        line-height: 1.75;
+        color: rgb(51 65 85);
+      }
 
-                <div class="tp53-row">
-                  <div class="tp53-badge">03</div>
-                  <div class="tp53-copy">
-                    Functional TP53 restoration can trigger apoptosis, halt the cell cycle, or reestablish key checkpoints
-                  </div>
-                </div>
+      @media (max-width: 640px) {
+        .tp53-row {
+          grid-template-columns: 56px 1fr;
+          gap: 18px;
+          padding: 20px;
+        }
 
-                <div class="tp53-row">
-                  <div class="tp53-badge">04</div>
-                  <div class="tp53-copy">
-                    Initial focus is TNBC, with preliminary efficacy signals observed in additional cancer types
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        .tp53-badge-wrap {
+          width: 56px;
+        }
+
+        .tp53-badge {
+          width: 50px;
+          height: 50px;
+          font-size: 17px;
+        }
+
+        .tp53-copy {
+          font-size: 15px;
+          line-height: 1.65;
+        }
+      }
+    </style>
+
+    <div class="tp53-stack">
+      <div class="tp53-row">
+        <div class="tp53-badge-wrap">
+          <div class="tp53-badge">01</div>
+        </div>
+        <div class="tp53-copy">
+          TP53 encodes p53, often called the guardian of the genome
+        </div>
+      </div>
+
+      <div class="tp53-row">
+        <div class="tp53-badge-wrap">
+          <div class="tp53-badge">02</div>
+        </div>
+        <div class="tp53-copy">
+          Mutated in more than 50% of human cancers and silenced across many others
+        </div>
+      </div>
+
+      <div class="tp53-row">
+        <div class="tp53-badge-wrap">
+          <div class="tp53-badge">03</div>
+        </div>
+        <div class="tp53-copy">
+          Functional TP53 restoration can trigger apoptosis, halt the cell cycle, or reestablish key checkpoints
+        </div>
+      </div>
+
+      <div class="tp53-row">
+        <div class="tp53-badge-wrap">
+          <div class="tp53-badge">04</div>
+        </div>
+        <div class="tp53-copy">
+          Initial focus is TNBC, with preliminary efficacy signals observed in additional cancer types
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           <!-- ================= END WHY TP53 MATTERS ================== -->
         </div>
       </div>
