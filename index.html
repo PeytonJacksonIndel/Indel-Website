@@ -10,34 +10,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white text-slate-900">
+<body class="bg-slate-950 text-white">
 
   <!-- ========================================================= -->
-  <!-- ================= GLOBAL BACKGROUND ===================== -->
+  <!-- ====================== PAGE BG ========================== -->
   <!-- ========================================================= -->
-  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(113,192,231,0.18),transparent_36%),radial-gradient(circle_at_80%_10%,rgba(82,117,182,0.14),transparent_30%),linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)]"></div>
+  <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(113,192,231,0.22),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(82,117,182,0.26),transparent_24%),radial-gradient(circle_at_50%_60%,rgba(59,130,246,0.10),transparent_26%),linear-gradient(180deg,#07111f_0%,#0a1426_38%,#0b1320_100%)]"></div>
+  <div class="fixed inset-0 -z-10 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.10)_1px,transparent_1px)] [background-size:72px_72px]"></div>
 
   <!-- ========================================================= -->
   <!-- ========================= HEADER ======================== -->
   <!-- ========================================================= -->
-  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-      <div class="flex items-center gap-5">
-        <img src="Indel Logo.png" alt="Indel logo" class="h-16 w-auto lg:h-20" />
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/65 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <div class="flex items-center gap-4">
+        <img src="Indel Logo.png" alt="Indel logo" class="h-11 w-auto rounded-md" />
         <div>
-          <div class="text-2xl font-semibold tracking-tight text-slate-900">Indel Bioinnovations</div>
-          <div class="mt-1 text-[12px] uppercase tracking-[0.34em] text-[rgb(82,117,182)]">
+          <div class="text-xl font-semibold tracking-tight text-white">Indel Bioinnovations</div>
+          <div class="mt-1 text-[11px] uppercase tracking-[0.34em] text-[rgb(113,192,231)]">
             Changing the cancer treatment paradigm
           </div>
         </div>
       </div>
 
       <nav class="hidden items-center gap-7 md:flex">
-        <a href="#science" class="text-sm text-slate-600 transition hover:text-slate-900">Science</a>
-        <a href="#data" class="text-sm text-slate-600 transition hover:text-slate-900">Data</a>
-        <a href="#timeline" class="text-sm text-slate-600 transition hover:text-slate-900">Timeline</a>
-        <a href="#team" class="text-sm text-slate-600 transition hover:text-slate-900">Team</a>
-        <a href="#contact" class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-50">
+        <a href="#science" class="text-sm text-slate-300 transition hover:text-white">Science</a>
+        <a href="#data" class="text-sm text-slate-300 transition hover:text-white">Data</a>
+        <a href="#timeline" class="text-sm text-slate-300 transition hover:text-white">Timeline</a>
+        <a href="#team" class="text-sm text-slate-300 transition hover:text-white">Team</a>
+        <a href="#contact" class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-white/10">
           Contact
         </a>
       </nav>
@@ -46,113 +47,132 @@
 
   <main>
 
-<!-- ========================================================= -->
-<!-- ========================== HERO ======================== -->
-<!-- ========================================================= -->
-<section class="relative overflow-hidden">
-  <div class="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 lg:grid-cols-[0.96fr_1.04fr] lg:px-8 lg:py-20">
+    <!-- ========================================================= -->
+    <!-- ========================== HERO ======================== -->
+    <!-- ========================================================= -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-6 pb-24 pt-14 lg:px-8 lg:pb-28 lg:pt-20">
 
-    <!-- ===== HERO LEFT ===== -->
-    <div class="max-w-3xl self-center">
-      <div class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)] shadow-sm backdrop-blur-sm">
-        <span class="h-2 w-2 rounded-full bg-[rgb(113,192,231)]"></span>
-        Preclinical oncology platform company
-      </div>
+        <div class="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <!-- ===== HERO LEFT ===== -->
+          <div class="relative">
+            <div class="absolute -left-10 top-8 h-40 w-40 rounded-full bg-[rgba(113,192,231,0.18)] blur-3xl"></div>
+            <div class="absolute left-56 top-24 h-52 w-52 rounded-full bg-[rgba(82,117,182,0.16)] blur-3xl"></div>
 
-      <h1 class="mt-6 text-5xl font-semibold leading-[0.95] tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
-        Restoring tumor suppression to change cancer outcomes
-      </h1>
-
-      <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
-        Indel Bioinnovations is developing a novel TP53 gene therapy for solid tumors, beginning with triple-negative breast cancer.
-      </p>
-
-      <div class="mt-10 flex flex-wrap gap-4">
-        <a href="#science" class="rounded-2xl bg-[rgb(82,117,182)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(82,117,182,0.28)] transition hover:scale-[1.01]">
-          Explore the science
-        </a>
-        <a href="#contact" class="rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50">
-          Connect with the team
-        </a>
-      </div>
-
-      <!-- ===== HERO CREDIBILITY STRIP ===== -->
-      <div class="mt-14 grid gap-4 sm:grid-cols-3">
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Stage</div>
-          <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">Preclinical</div>
-          <div class="mt-2 text-sm leading-6 text-slate-600">Lead program advancing toward IND</div>
-        </div>
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Lead Indication</div>
-          <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">TNBC</div>
-          <div class="mt-2 text-sm leading-6 text-slate-600">Triple-negative breast cancer</div>
-        </div>
-        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Signal</div>
-          <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">~75%</div>
-          <div class="mt-2 text-sm leading-6 text-slate-600">Tumor growth inhibition in TNBC xenograft models</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== HERO RIGHT ===== -->
-    <div class="relative self-center">
-      <div class="absolute -left-6 top-10 h-24 w-24 rounded-full bg-[rgba(113,192,231,0.14)] blur-3xl"></div>
-      <div class="absolute right-0 top-0 h-24 w-24 rounded-full bg-[rgba(82,117,182,0.10)] blur-3xl"></div>
-
-      <div class="relative overflow-hidden rounded-[36px] border border-slate-200 bg-white p-6 shadow-[0_30px_90px_rgba(15,23,42,0.08)]">
-        <div class="rounded-[30px] border border-slate-200 bg-[radial-gradient(circle_at_top,rgba(113,192,231,0.12),transparent_35%),linear-gradient(180deg,#ffffff,#f8fafc)] p-8">
-          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Why TP53 matters</div>
-          <div class="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-slate-900">
-            One of the most critical control points in cancer biology
-          </div>
-
-          <div class="mt-8 flex flex-col gap-6">
-            <div style="border-left: 3px solid rgb(82,117,182); padding-left: 18px;">
-              <div style="font-size: 16px; line-height: 1.75; color: #334155;">
-                TP53 encodes p53, often called the guardian of the genome
+            <div class="relative max-w-4xl">
+              <div class="inline-flex items-center gap-3 rounded-full border border-[rgba(113,192,231,0.25)] bg-[rgba(113,192,231,0.08)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[rgb(113,192,231)]">
+                <span class="h-2 w-2 rounded-full bg-[rgb(113,192,231)]"></span>
+                Preclinical oncology platform company
               </div>
-            </div>
 
-            <div style="border-left: 3px solid rgb(82,117,182); padding-left: 18px;">
-              <div style="font-size: 16px; line-height: 1.75; color: #334155;">
-                Mutated in more than <strong>50% of human cancers</strong> and silenced across many others
+              <h1 class="mt-7 max-w-5xl text-5xl font-semibold leading-[0.92] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+                Restoring tumor suppression to change cancer outcomes
+              </h1>
+
+              <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
+                Indel Bioinnovations is developing a novel TP53 gene therapy for solid tumors, beginning with triple-negative breast cancer.
+              </p>
+
+              <div class="mt-10 flex flex-wrap gap-4">
+                <a href="#science" class="rounded-2xl bg-[rgb(82,117,182)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_35px_rgba(82,117,182,0.35)] transition hover:scale-[1.01] hover:bg-[rgb(74,107,169)]">
+                  Explore the science
+                </a>
+                <a href="#contact" class="rounded-2xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
+                  Connect with the team
+                </a>
               </div>
-            </div>
 
-            <div style="border-left: 3px solid rgb(82,117,182); padding-left: 18px;">
-              <div style="font-size: 16px; line-height: 1.75; color: #334155;">
-                Functional TP53 restoration can trigger apoptosis, halt the cell cycle, or reestablish key checkpoints
-              </div>
-            </div>
+              <!-- ===== HERO STRIP ===== -->
+              <div class="mt-14 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.20)] backdrop-blur">
+                  <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Stage</div>
+                  <div class="mt-3 text-3xl font-semibold tracking-tight text-white">Preclinical</div>
+                  <div class="mt-2 text-sm leading-6 text-slate-300">Lead program advancing toward IND</div>
+                </div>
 
-            <div style="border-left: 3px solid rgb(82,117,182); padding-left: 18px;">
-              <div style="font-size: 16px; line-height: 1.75; color: #334155;">
-                Initial focus is TNBC, with preliminary efficacy signals observed in additional cancer types
+                <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.20)] backdrop-blur">
+                  <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Lead indication</div>
+                  <div class="mt-3 text-3xl font-semibold tracking-tight text-white">TNBC</div>
+                  <div class="mt-2 text-sm leading-6 text-slate-300">Triple-negative breast cancer</div>
+                </div>
+
+                <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.20)] backdrop-blur">
+                  <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Signal</div>
+                  <div class="mt-3 text-3xl font-semibold tracking-tight text-white">~75%</div>
+                  <div class="mt-2 text-sm leading-6 text-slate-300">Tumor growth inhibition in TNBC xenograft models</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</section>
+          <!-- ===== HERO RIGHT ===== -->
+          <div class="relative">
+            <div class="absolute -left-8 top-12 h-28 w-28 rounded-full bg-[rgba(113,192,231,0.14)] blur-3xl"></div>
+            <div class="absolute right-4 top-0 h-32 w-32 rounded-full bg-[rgba(82,117,182,0.18)] blur-3xl"></div>
+
+            <div class="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+              <div class="rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-8">
+                <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">
+                  Why TP53 matters
+                </div>
+
+                <div class="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-white">
+                  A critical control point in cancer biology
+                </div>
+
+                <div class="mt-8 flex flex-col gap-6">
+                  <div class="rounded-2xl border border-white/8 bg-white/[0.04] p-5">
+                    <div class="border-l-[3px] border-[rgb(82,117,182)] pl-4 text-[17px] leading-8 text-slate-200">
+                      TP53 encodes p53, often called the guardian of the genome
+                    </div>
+                  </div>
+
+                  <div class="rounded-2xl border border-white/8 bg-white/[0.04] p-5">
+                    <div class="border-l-[3px] border-[rgb(82,117,182)] pl-4 text-[17px] leading-8 text-slate-200">
+                      Mutated in more than <strong class="text-white">50% of human cancers</strong> and silenced across many others
+                    </div>
+                  </div>
+
+                  <div class="rounded-2xl border border-white/8 bg-white/[0.04] p-5">
+                    <div class="border-l-[3px] border-[rgb(82,117,182)] pl-4 text-[17px] leading-8 text-slate-200">
+                      Functional TP53 restoration can trigger apoptosis, halt the cell cycle, or reestablish key checkpoints
+                    </div>
+                  </div>
+
+                  <div class="rounded-2xl border border-white/8 bg-white/[0.04] p-5">
+                    <div class="border-l-[3px] border-[rgb(82,117,182)] pl-4 text-[17px] leading-8 text-slate-200">
+                      Initial focus is TNBC, with preliminary efficacy signals observed in additional cancer types
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== HERO BOTTOM ACCENT ===== -->
+        <div class="mt-14 h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+      </div>
+    </section>
 
     <!-- ========================================================= -->
     <!-- ======================== WHY NOW ======================= -->
     <!-- ========================================================= -->
-    <section class="border-t border-slate-200 bg-slate-50/70">
+    <section class="relative border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div class="max-w-4xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Why now</div>
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-            The timing for tumor suppressor restoration has changed
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-600">
-            Advances in cancer biology, gene therapy, and translational development are converging to make tumor suppressor restoration a viable therapeutic strategy in ways that were not previously possible.
-          </p>
+        <div class="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Why now</div>
+            <div class="mt-4 text-2xl font-semibold tracking-tight text-white">
+              The timing for tumor suppressor restoration has changed
+            </div>
+          </div>
+
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <p class="text-xl leading-9 text-slate-200">
+              Advances in cancer biology, gene therapy, and translational development are converging to make tumor suppressor restoration a viable therapeutic strategy in ways that were not previously possible.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -160,37 +180,45 @@
     <!-- ========================================================= -->
     <!-- ======================== SCIENCE ======================= -->
     <!-- ========================================================= -->
-    <section id="science" class="border-t border-slate-200 bg-white">
+    <section id="science" class="relative border-t border-white/8">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-
         <div class="max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Science</div>
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Science</div>
+          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             A broader cancer biology story, not just a delivery story
           </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-600">
-            Indel’s thesis centers on restoring functional TP53 in cancer cells. The scientific narrative focuses on reestablishing core tumor suppressor function in cancers where those safeguards have been lost.
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            Indel’s thesis centers on restoring functional TP53 in cancer cells. The scientific narrative focuses on reestablishing core tumor suppressor function in cancers where those safeguards havebeen lost.
           </p>
         </div>
 
         <div class="mt-14 grid gap-6 lg:grid-cols-3">
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">The TNBC problem</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="h-3 w-3 rounded-full bg-[rgb(113,192,231)]"></div>
+              <div class="text-xl font-semibold text-white">The TNBC problem</div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-300">
               Triple-negative breast cancer remains a high-need setting with limited targeted treatment options and a standard of care still anchored in chemotherapy, with or without checkpoint inhibition.
             </p>
           </div>
 
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">The solution</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="h-3 w-3 rounded-full bg-[rgb(113,192,231)]"></div>
+              <div class="text-xl font-semibold text-white">The solution</div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-300">
               Indel is developing a non-viral TP53 gene therapy designed to reintroduce functional TP53 copies into cancer cells and restore the biology that normally prevents damaged cells from dividing.
             </p>
           </div>
 
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">Why it matters</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="h-3 w-3 rounded-full bg-[rgb(113,192,231)]"></div>
+              <div class="text-xl font-semibold text-white">Why it matters</div>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-300">
               If functional TP53 is restored, cancer cells may undergo apoptosis, halt cell-cycle progression, or recover key checkpoint controls that suppress malignant growth.
             </p>
           </div>
@@ -199,137 +227,203 @@
     </section>
 
     <!-- ========================================================= -->
-
     <!-- ========================== DATA ======================== -->
-
     <!-- ========================================================= -->
-
-    <section id="data" class="border-t border-slate-200 bg-slate-50/70">
-
+    <section id="data" class="relative border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
 
         <div class="max-w-3xl">
-
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Data & Opportunity</div>
-
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-
-            Early proof of concept in TNBC with broader mutation-driven relevance
-
+          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Data & Opportunity</div>
+          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            Early proof of concept in TNBC with mutation-driven relevance
           </h2>
-
-          <p class="mt-6 text-lg leading-8 text-slate-600">
-
-            The current data package supports TNBC as the lead indication while reinforcing the broader relevance of TP53 restoration across mutation-driven cancers.
-
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            Preclinical data supports TNBC as the lead indication while reinforcing broader applicability across TP53-mutant cancers.
           </p>
-
         </div>
 
-        <div class="mt-14 grid gap-6 lg:grid-cols-2">
-
-          <div class="rounded-[34px] border border-slate-200 bg-white p-8 shadow-sm">
-
-            <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Preclinical proof of concept</div>
-
-            <div class="mt-4 text-4xl font-semibold tracking-tight text-slate-900">~75% tumor growth inhibition</div>
-
-            <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-
-              In TNBC xenograft models in vivo following Indel-53 treatment, early data highlights approximately 75% tumor growth inhibition. Across seven in vitro cancer models tested to date, the five with TP53 mutations have shown impact from treatment, supporting the mutation-linked rationale behind the platform.
-
-            </p>
-
-          </div>
-
-          <div class="rounded-[34px] border border-slate-200 bg-white p-8 shadow-sm">
-
-            <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">TNBC patient opportunity</div>
-
-            <div class="mt-6 grid gap-4 sm:grid-cols-2">
-
-              <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-
-                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">TNBC incidence</div>
-
-                <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">~275K</div>
-
-                <div class="mt-2 text-sm leading-6 text-slate-600">Estimated annual global patient population</div>
-
-              </div>
-
-              <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-
-                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">TP53 mutation rate</div>
-
-                <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">~80%</div>
-
-                <div class="mt-2 text-sm leading-6 text-slate-600">Of TNBC tumors carry TP53 mutation</div>
-
-              </div>
-
-              <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-
-                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Lead focus</div>
-
-                <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">TNBC</div>
-
-                <div class="mt-2 text-sm leading-6 text-slate-600">Initial indication with strong mutation prevalence</div>
-
-              </div>
-
-              <div class="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-
-                <div class="text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Broader relevance</div>
-
-                <div class="mt-2 text-2xl font-semibold tracking-tight text-slate-900">~10M</div>
-
-                <div class="mt-2 text-sm leading-6 text-slate-600">Estimated annual TP53-mutant cancer population</div>
-
-              </div>
-
+        <!-- ===== KEY RESULT BLOCK ===== -->
+        <div class="mt-14 rounded-[36px] border border-white/10 bg-white/5 p-10 shadow-[0_25px_70px_rgba(0,0,0,0.22)] backdrop-blur">
+          <div class="max-w-2xl">
+            <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">
+              Preclinical proof of concept
             </div>
 
+            <div class="mt-4 text-5xl font-semibold tracking-tight text-white">
+              ~75% tumor growth inhibition
+            </div>
+
+            <p class="mt-5 text-base leading-7 text-slate-300">
+              In TNBC xenograft models following Indel-53 treatment, tumor growth is significantly suppressed relative to control. Across seven in vitro cancer models tested, the five with TP53 mutations demonstrated measurable response to treatment.
+            </p>
           </div>
 
+          <!-- ===== CHART ===== -->
+          <div class="mt-12 overflow-x-auto">
+            <div class="mx-auto max-w-4xl">
+              <svg viewBox="0 0 900 520" class="h-auto w-full">
+                <!-- Axes -->
+                <line x1="90" y1="420" x2="820" y2="420" stroke="#64748b"/>
+                <line x1="90" y1="420" x2="90" y2="80" stroke="#64748b"/>
+
+                <!-- Grid -->
+                <g stroke="rgba(255,255,255,0.10)">
+                  <line x1="90" y1="420" x2="820" y2="420"/>
+                  <line x1="90" y1="340" x2="820" y2="340"/>
+                  <line x1="90" y1="260" x2="820" y2="260"/>
+                  <line x1="90" y1="180" x2="820" y2="180"/>
+                  <line x1="90" y1="100" x2="820" y2="100"/>
+                </g>
+
+                <!-- X labels -->
+                <g fill="#94a3b8" font-size="13">
+                  <text x="150" y="445">0</text>
+                  <text x="260" y="445">3</text>
+                  <text x="370" y="445">6</text>
+                  <text x="480" y="445">10</text>
+                  <text x="590" y="445">13</text>
+                  <text x="700" y="445">17</text>
+                </g>
+
+                <!-- Vehicle -->
+                <polyline
+                  fill="none"
+                  stroke="rgb(82,117,182)"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  points="150,380 260,350 370,320 480,270 590,200 700,170"
+                />
+                <g fill="rgb(82,117,182)">
+                  <circle cx="150" cy="380" r="4"/>
+                  <circle cx="260" cy="350" r="4"/>
+                  <circle cx="370" cy="320" r="4"/>
+                  <circle cx="480" cy="270" r="4"/>
+                  <circle cx="590" cy="200" r="4"/>
+                  <circle cx="700" cy="170" r="4"/>
+                </g>
+                <g stroke="rgb(82,117,182)" stroke-width="2">
+                  <line x1="150" y1="384" x2="150" y2="376"/>
+                  <line x1="260" y1="356" x2="260" y2="344"/>
+                  <line x1="370" y1="326" x2="370" y2="314"/>
+                  <line x1="480" y1="282" x2="480" y2="258"/>
+                  <line x1="590" y1="220" x2="590" y2="180"/>
+                  <line x1="700" y1="190" x2="700" y2="150"/>
+                </g>
+
+                <!-- Indel-53 -->
+                <polyline
+                  fill="none"
+                  stroke="rgb(113,192,231)"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  points="150,382 260,378 370,378 480,360 590,345 700,330"
+                />
+                <g fill="rgb(113,192,231)">
+                  <circle cx="150" cy="382" r="4"/>
+                  <circle cx="260" cy="378" r="4"/>
+                  <circle cx="370" cy="378" r="4"/>
+                  <circle cx="480" cy="360" r="4"/>
+                  <circle cx="590" cy="345" r="4"/>
+                  <circle cx="700" cy="330" r="4"/>
+                </g>
+                <g stroke="rgb(113,192,231)" stroke-width="2">
+                  <line x1="150" y1="386" x2="150" y2="378"/>
+                  <line x1="260" y1="382" x2="260" y2="372"/>
+                  <line x1="370" y1="382" x2="370" y2="372"/>
+                  <line x1="480" y1="368" x2="480" y2="352"/>
+                  <line x1="590" y1="360" x2="590" y2="330"/>
+                  <line x1="700" y1="350" x2="700" y2="310"/>
+                </g>
+
+                <!-- Legend -->
+                <g font-size="15" fill="#cbd5e1">
+                  <line x1="300" y1="480" x2="340" y2="480" stroke="rgb(82,117,182)" stroke-width="4"/>
+                  <text x="350" y="485">Vehicle</text>
+
+                  <line x1="470" y1="480" x2="510" y2="480" stroke="rgb(113,192,231)" stroke-width="4"/>
+                  <text x="520" y="485">Indel-53</text>
+                </g>
+
+                <!-- Footnote -->
+                <text x="90" y="485" fill="#94a3b8" font-size="12">
+                  MDA-MB-231 model • Mean ± SE • n = 12
+                </text>
+              </svg>
+            </div>
+          </div>
         </div>
 
-      </div>
+        <!-- ===== TNBC OPPORTUNITY ===== -->
+        <div class="mt-16 grid gap-6 lg:grid-cols-4">
+          <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xs uppercase tracking-[0.22em] text-[rgb(113,192,231)]">TNBC incidence</div>
+            <div class="mt-3 text-3xl font-semibold text-white">~275K</div>
+            <div class="mt-2 text-sm leading-6 text-slate-300">Annual global patients</div>
+          </div>
 
+          <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xs uppercase tracking-[0.22em] text-[rgb(113,192,231)]">TP53 mutation</div>
+            <div class="mt-3 text-3xl font-semibold text-white">~80%</div>
+            <div class="mt-2 text-sm leading-6 text-slate-300">Of TNBC tumors</div>
+          </div>
+
+          <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xs uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Target entry</div>
+            <div class="mt-3 text-3xl font-semibold text-white">TNBC</div>
+            <div class="mt-2 text-sm leading-6 text-slate-300">High unmet need segment</div>
+          </div>
+
+          <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xs uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Broader TP53</div>
+            <div class="mt-3 text-3xl font-semibold text-white">~10M</div>
+            <div class="mt-2 text-sm leading-6 text-slate-300">Global mutation-driven population</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ========================================================= -->
     <!-- ======================== TIMELINE ====================== -->
     <!-- ========================================================= -->
-    <section id="timeline" class="border-t border-slate-200 bg-white">
+    <section id="timeline" class="relative border-t border-white/8">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-
         <div class="max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Development Timeline</div>
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Development Timeline</div>
+          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Lead program advancing toward IND with expansion beyond TNBC
           </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-600">
+          <p class="mt-6 text-lg leading-8 text-slate-300">
             TNBC is the lead entry point, with cancer subtype expansion following and an IND objective in 2028 anchored by validation, safety, and manufacturing milestones.
           </p>
         </div>
 
         <div class="mt-14 grid gap-6 lg:grid-cols-4">
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">Discovery</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">TP53 expression restored, in vitro TNBC efficacy established, and first in vivo efficacy demonstrated.</p>
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xl font-semibold text-white">Discovery</div>
+            <p class="mt-4 text-sm leading-7 text-slate-300">
+              TP53 expression restored, in vitro TNBC efficacy established, and first in vivo efficacy demonstrated.
+            </p>
           </div>
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">Preclinical</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">Xenograft efficacy, advanced model validation, dose and durability work, and PK/PD plus safety studies.</p>
+
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xl font-semibold text-white">Preclinical</div>
+            <p class="mt-4 text-sm leading-7 text-slate-300">
+              Xenograft efficacy, advanced model validation, dose and durability work, and PK/PD plus safety studies.
+            </p>
           </div>
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">IND-enabling</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">GLP tox studies, CMC and GMP preparation, pre-IND engagement, and lead candidate selection.</p>
+
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xl font-semibold text-white">IND-enabling</div>
+            <p class="mt-4 text-sm leading-7 text-slate-300">
+              GLP tox studies, CMC and GMP preparation, pre-IND engagement, and lead candidate selection.
+            </p>
           </div>
-          <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-            <div class="text-xl font-semibold text-slate-900">Clinical path</div>
-            <p class="mt-4 text-sm leading-7 text-slate-600">IND submission target by 2028, followed by Phase 1 development and broader cancer subtype expansion.</p>
+
+          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+            <div class="text-xl font-semibold text-white">Clinical path</div>
+            <p class="mt-4 text-sm leading-7 text-slate-300">
+              IND submission target by 2028, followed by Phase 1 development and broader cancer subtype expansion.
+            </p>
           </div>
         </div>
       </div>
@@ -338,73 +432,77 @@
     <!-- ========================================================= -->
     <!-- ========================== TEAM ======================== -->
     <!-- ========================================================= -->
-    <section id="team" class="border-t border-slate-200 bg-slate-50/70">
+    <section id="team" class="relative border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-
         <div class="max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Team</div>
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Team</div>
+          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Leadership, advisors, and operators shaping the company
           </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-600">
+          <p class="mt-6 text-lg leading-8 text-slate-300">
             The full group shaping Indel includes founders, scientific leadership, advisors, and operating team members.
           </p>
         </div>
 
         <div class="mt-14">
-          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Core Team</div>
+          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Core Team</div>
           <div class="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Peyton Jackson</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">CEO</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Leads company strategy, fundraising, and execution.</p>
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Peyton Jackson</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">CEO</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Leads company strategy, fundraising, and execution.</p>
             </div>
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Jared Wieland</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">CSO</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Leads scientific strategy and preclinical development.</p>
+
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Jared Wieland</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">CSO</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Leads scientific strategy and preclinical development.</p>
             </div>
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Jared Barrott, PhD</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Scientific Advisor</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Guides scientific direction, translational strategy, and oncology program development.</p>
+
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Jared Barrott, PhD</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Scientific Advisor</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Guides scientific direction, translational strategy, and oncology program development.</p>
             </div>
           </div>
         </div>
 
         <div class="mt-14">
-          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Advisors</div>
+          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Advisors</div>
           <div class="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Greg Kunst</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Business Advisor</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Supports business strategy, company building, and long-term execution planning.</p>
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Greg Kunst</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Business Advisor</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Supports business strategy, company building, and long-term execution planning.</p>
             </div>
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Laurens Bockheart</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Business Advisor</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Advises on growth strategy, company development, and broader business planning.</p>
+
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Laurens Bockheart</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Business Advisor</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Advises on growth strategy, company development, and broader business planning.</p>
             </div>
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Jon Sparks, PhD, JD</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">IP Advisor</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Advises on intellectual property strategy, protection, and platform positioning.</p>
+
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Jon Sparks, PhD, JD</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">IP Advisor</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Advises on intellectual property strategy, protection, and platform positioning.</p>
             </div>
           </div>
         </div>
 
         <div class="mt-14">
-          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Team</div>
+          <div class="text-sm font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Team</div>
           <div class="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Spencer Nadauld</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Research Assistant</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Supports core research activities, experimental execution, and preclinical development work across the platform.</p>
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Spencer Nadauld</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Research Assistant</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Supports core research activities, experimental execution, and preclinical development work across the platform.</p>
             </div>
-            <div class="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
-              <div class="text-xl font-semibold text-slate-900">Will Penrod</div>
-              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(82,117,182)]">Team Member</div>
-              <p class="mt-4 text-sm leading-7 text-slate-600">Assists with wet lab work and supports execution across Indel’s growing scientific efforts.</p>
+
+            <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div class="text-xl font-semibold text-white">Will Penrod</div>
+              <div class="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-[rgb(113,192,231)]">Team Member</div>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Assists with wet lab work and supports execution across Indel’s growing scientific efforts.</p>
             </div>
           </div>
         </div>
@@ -414,36 +512,33 @@
     <!-- ========================================================= -->
     <!-- ======================== CONTACT ======================= -->
     <!-- ========================================================= -->
-    <section id="contact" class="border-t border-slate-200 bg-white">
+    <section id="contact" class="relative border-t border-white/8">
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-
-          <div>
-            <div class="max-w-3xl">
-              <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(82,117,182)]">Contact</div>
-              <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-                Partner with Indel
-              </h2>
-              <p class="mt-6 text-lg leading-8 text-slate-600">
-                Indel is seeking conversations with investors, scientific collaborators, and strategic partners aligned with a new therapeutic approach to cancer treatment.
-              </p>
-            </div>
+        <div class="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+          <div class="max-w-3xl">
+            <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Contact</div>
+            <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              Partner with Indel
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">
+              Indel is seeking conversations with investors, scientific collaborators, and strategic partners aligned with a new therapeutic approach to cancer treatment.
+            </p>
           </div>
 
-          <div class="rounded-[34px] border border-slate-200 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+          <div class="rounded-[34px] border border-white/10 bg-white/5 p-8 shadow-[0_22px_60px_rgba(0,0,0,0.20)] backdrop-blur">
             <div class="flex items-center gap-4">
-              <img src="Indel Logo.png" alt="Indel logo" class="h-12 w-auto" />
-              <div class="text-lg font-semibold text-slate-900">Connect with the team</div>
+              <img src="Indel Logo.png" alt="Indel logo" class="h-12 w-auto rounded-md" />
+              <div class="text-lg font-semibold text-white">Connect with the team</div>
             </div>
 
-            <p class="mt-4 text-sm leading-7 text-slate-600">
+            <p class="mt-4 text-sm leading-7 text-slate-300">
               For partnership, investor, or scientific inquiries, reach out to the Indel team.
             </p>
 
-            <div class="mt-6 space-y-3 text-sm text-slate-700">
-              <div><span class="text-slate-500">Company:</span> Indel Bioinnovations</div>
-              <div><span class="text-slate-500">Email:</span> contact@indelbioinnovations.com</div>
-              <div><span class="text-slate-500">Stage:</span> Preclinical oncology platform company</div>
+            <div class="mt-6 space-y-3 text-sm text-slate-200">
+              <div><span class="text-slate-400">Company:</span> Indel Bioinnovations</div>
+              <div><span class="text-slate-400">Email:</span> contact@indelbioinnovations.com</div>
+              <div><span class="text-slate-400">Stage:</span> Preclinical oncology platform company</div>
             </div>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -461,8 +556,8 @@
   <!-- ========================================================= -->
   <!-- ========================= FOOTER ======================== -->
   <!-- ========================================================= -->
-  <footer class="border-t border-slate-200 bg-slate-50/70">
-    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+  <footer class="border-t border-white/8 bg-black/10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between lg:px-8">
       <div>© 2026 Indel Bioinnovations. All rights reserved.</div>
       <div>Novel TP53 gene therapy for high-need oncology indications.</div>
     </div>
