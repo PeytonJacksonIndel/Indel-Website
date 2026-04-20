@@ -237,89 +237,105 @@
       </div>
 
       <!-- ===================== CHART ===================== -->
-      <div class="mt-12 overflow-x-auto">
-        <svg viewBox="0 0 980 640" class="h-auto w-full min-w-[760px]">
+<div class="mt-10 mx-auto max-w-4xl">
+  <svg viewBox="0 0 900 520" class="w-full h-auto">
 
-          <!-- Background -->
-          <rect x="0" y="0" width="980" height="640" rx="24" fill="#ffffff"></rect>
+    <!-- Axes -->
+    <line x1="90" y1="420" x2="820" y2="420" stroke="#94a3b8"/>
+    <line x1="90" y1="420" x2="90" y2="80" stroke="#94a3b8"/>
 
-          <!-- Grid -->
-          <g stroke="#e2e8f0">
-            <line x1="110" y1="470" x2="890" y2="470"/>
-            <line x1="110" y1="380" x2="890" y2="380"/>
-            <line x1="110" y1="290" x2="890" y2="290"/>
-            <line x1="110" y1="200" x2="890" y2="200"/>
-            <line x1="110" y1="110" x2="890" y2="110"/>
-          </g>
+    <!-- Grid -->
+    <g stroke="#e2e8f0">
+      <line x1="90" y1="420" x2="820" y2="420"/>
+      <line x1="90" y1="340" x2="820" y2="340"/>
+      <line x1="90" y1="260" x2="820" y2="260"/>
+      <line x1="90" y1="180" x2="820" y2="180"/>
+      <line x1="90" y1="100" x2="820" y2="100"/>
+    </g>
 
-          <!-- Axes -->
-          <line x1="110" y1="470" x2="890" y2="470" stroke="#94a3b8"/>
-          <line x1="110" y1="470" x2="110" y2="90" stroke="#94a3b8"/>
+    <!-- X labels -->
+    <g fill="#64748b" font-size="13">
+      <text x="150" y="445">0</text>
+      <text x="260" y="445">3</text>
+      <text x="370" y="445">6</text>
+      <text x="480" y="445">10</text>
+      <text x="590" y="445">13</text>
+      <text x="700" y="445">17</text>
+    </g>
 
-          <!-- Labels -->
-          <g fill="#64748b" font-size="14">
-            <text x="170" y="500" text-anchor="middle">0</text>
-            <text x="300" y="500" text-anchor="middle">3</text>
-            <text x="430" y="500" text-anchor="middle">6</text>
-            <text x="560" y="500" text-anchor="middle">10</text>
-            <text x="690" y="500" text-anchor="middle">13</text>
-            <text x="820" y="500" text-anchor="middle">17</text>
-          </g>
+    <!-- ================= VEHICLE ================= -->
+    <!-- Line -->
+    <polyline
+      fill="none"
+      stroke="rgb(82,117,182)"
+      stroke-width="4"
+      stroke-linecap="round"
+      points="150,380 260,350 370,320 480,270 590,200 700,170"
+    />
 
-          <!-- Vehicle line -->
-          <polyline
-            fill="none"
-            stroke="rgb(82,117,182)"
-            stroke-width="5"
-            stroke-linecap="round"
-            points="170,418 300,390 430,360 560,310 690,250 820,215"
-          />
+    <!-- Points -->
+    <g fill="rgb(82,117,182)">
+      <circle cx="150" cy="380" r="4"/>
+      <circle cx="260" cy="350" r="4"/>
+      <circle cx="370" cy="320" r="4"/>
+      <circle cx="480" cy="270" r="4"/>
+      <circle cx="590" cy="200" r="4"/>
+      <circle cx="700" cy="170" r="4"/>
+    </g>
 
-          <!-- Indel line -->
-          <polyline
-            fill="none"
-            stroke="rgb(113,192,231)"
-            stroke-width="5"
-            stroke-linecap="round"
-            points="170,420 300,415 430,415 560,400 690,385 820,370"
-          />
+    <!-- Error bars -->
+    <g stroke="rgb(82,117,182)" stroke-width="2">
+      <line x1="150" y1="384" x2="150" y2="376"/>
+      <line x1="260" y1="356" x2="260" y2="344"/>
+      <line x1="370" y1="326" x2="370" y2="314"/>
+      <line x1="480" y1="282" x2="480" y2="258"/>
+      <line x1="590" y1="220" x2="590" y2="180"/>
+      <line x1="700" y1="190" x2="700" y2="150"/>
+    </g>
 
-          <!-- Points -->
-          <g fill="rgb(82,117,182)">
-            <circle cx="170" cy="418" r="4"/>
-            <circle cx="300" cy="390" r="4"/>
-            <circle cx="430" cy="360" r="4"/>
-            <circle cx="560" cy="310" r="4"/>
-            <circle cx="690" cy="250" r="4"/>
-            <circle cx="820" cy="215" r="4"/>
-          </g>
+    <!-- ================= INDEL ================= -->
+    <polyline
+      fill="none"
+      stroke="rgb(113,192,231)"
+      stroke-width="4"
+      stroke-linecap="round"
+      points="150,382 260,378 370,378 480,360 590,345 700,330"
+    />
 
-          <g fill="rgb(113,192,231)">
-            <circle cx="170" cy="420" r="4"/>
-            <circle cx="300" cy="415" r="4"/>
-            <circle cx="430" cy="415" r="4"/>
-            <circle cx="560" cy="400" r="4"/>
-            <circle cx="690" cy="385" r="4"/>
-            <circle cx="820" cy="370" r="4"/>
-          </g>
+    <g fill="rgb(113,192,231)">
+      <circle cx="150" cy="382" r="4"/>
+      <circle cx="260" cy="378" r="4"/>
+      <circle cx="370" cy="378" r="4"/>
+      <circle cx="480" cy="360" r="4"/>
+      <circle cx="590" cy="345" r="4"/>
+      <circle cx="700" cy="330" r="4"/>
+    </g>
 
-          <!-- Legend -->
-          <g font-size="16" fill="#334155">
-            <line x1="350" y1="590" x2="390" y2="590" stroke="rgb(82,117,182)" stroke-width="5"/>
-            <text x="400" y="596">Vehicle</text>
+    <g stroke="rgb(113,192,231)" stroke-width="2">
+      <line x1="150" y1="386" x2="150" y2="378"/>
+      <line x1="260" y1="382" x2="260" y2="372"/>
+      <line x1="370" y1="382" x2="370" y2="372"/>
+      <line x1="480" y1="368" x2="480" y2="352"/>
+      <line x1="590" y1="360" x2="590" y2="330"/>
+      <line x1="700" y1="350" x2="700" y2="310"/>
+    </g>
 
-            <line x1="520" y1="590" x2="560" y2="590" stroke="rgb(113,192,231)" stroke-width="5"/>
-            <text x="570" y="596">Indel-53</text>
-          </g>
+    <!-- Legend -->
+    <g font-size="15" fill="#334155">
+      <line x1="300" y1="480" x2="340" y2="480" stroke="rgb(82,117,182)" stroke-width="4"/>
+      <text x="350" y="485">Vehicle</text>
 
-          <!-- Footnote -->
-          <text x="110" y="600" fill="#64748b" font-size="13">
-            MDA-MB-231 model • Mean ± SE • n = 12
-          </text>
+      <line x1="470" y1="480" x2="510" y2="480" stroke="rgb(113,192,231)" stroke-width="4"/>
+      <text x="520" y="485">Indel-53</text>
+    </g>
 
-        </svg>
-      </div>
-    </div>
+    <!-- Footnote -->
+    <text x="90" y="485" fill="#64748b" font-size="12">
+      MDA-MB-231 model • Mean ± SE • n = 12
+    </text>
+
+  </svg>
+</div>
 
     <!-- ===================================================== -->
     <!-- ==================== MARKET / TNBC =================== -->
