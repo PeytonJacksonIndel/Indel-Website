@@ -422,22 +422,95 @@
     <!-- ========================== DATA ======================== -->
     <!-- ========================================================= -->
     <section id="data" class="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
-        <!-- CHAOS → ORDER BACKGROUND -->
-  <div class="absolute inset-0 -z-20 overflow-hidden">
+<!-- CHAOS → ORDER BACKGROUND -->
+<div class="absolute inset-0 -z-20 overflow-hidden">
+  <svg
+    class="absolute inset-0 h-full w-full opacity-[0.22]"
+    viewBox="0 0 1600 900"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="dataFade" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="rgba(113,192,231,0.30)" />
+        <stop offset="45%" stop-color="rgba(113,192,231,0.20)" />
+        <stop offset="70%" stop-color="rgba(113,192,231,0.12)" />
+        <stop offset="100%" stop-color="rgba(113,192,231,0.05)" />
+      </linearGradient>
 
-    <!-- left chaotic motion -->
-    <div class="absolute inset-y-0 left-0 w-1/2 wave-chaos opacity-100"></div>
+      <filter id="softGlow">
+        <feGaussianBlur stdDeviation="2.2" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
 
-    <!-- right controlled motion -->
-    <div class="absolute inset-y-0 right-0 w-1/2 wave-calm opacity-100"></div>
+    <!-- chaotic left -->
+    <g stroke="url(#dataFade)" stroke-width="1.6" fill="none" filter="url(#softGlow)">
+      <path d="M-100 170 C 80 60, 220 330, 420 220 S 760 120, 940 210">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite"
+          values="
+          M-100 170 C 80 60, 220 330, 420 220 S 760 120, 940 210;
+          M-100 190 C 120 40, 250 350, 440 210 S 760 110, 940 230;
+          M-100 170 C 80 60, 220 330, 420 220 S 760 120, 940 210" />
+      </path>
+      <path d="M-100 250 C 100 120, 250 410, 470 270 S 780 180, 980 250">
+        <animate attributeName="d" dur="14s" repeatCount="indefinite"
+          values="
+          M-100 250 C 100 120, 250 410, 470 270 S 780 180, 980 250;
+          M-100 270 C 130 100, 260 430, 500 250 S 800 160, 980 270;
+          M-100 250 C 100 120, 250 410, 470 270 S 780 180, 980 250" />
+      </path>
+      <path d="M-100 340 C 90 200, 240 500, 460 360 S 760 250, 970 320">
+        <animate attributeName="d" dur="11s" repeatCount="indefinite"
+          values="
+          M-100 340 C 90 200, 240 500, 460 360 S 760 250, 970 320;
+          M-100 320 C 120 180, 260 520, 500 340 S 760 260, 970 350;
+          M-100 340 C 90 200, 240 500, 460 360 S 760 250, 970 320" />
+      </path>
+      <path d="M-100 430 C 130 250, 300 600, 520 440 S 820 320, 1040 390">
+        <animate attributeName="d" dur="13s" repeatCount="indefinite"
+          values="
+          M-100 430 C 130 250, 300 600, 520 440 S 820 320, 1040 390;
+          M-100 410 C 150 230, 320 620, 540 430 S 840 300, 1040 410;
+          M-100 430 C 130 250, 300 600, 520 440 S 820 320, 1040 390" />
+      </path>
+    </g>
 
-    <!-- center glow -->
-    <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,rgba(113,192,231,0.10),transparent_70%)] blur-3xl"></div>
+    <!-- calmer right -->
+    <g stroke="rgba(113,192,231,0.22)" stroke-width="1.4" fill="none">
+      <path d="M780 250 C 930 240, 1060 280, 1200 260 S 1450 250, 1700 255">
+        <animate attributeName="d" dur="18s" repeatCount="indefinite"
+          values="
+          M780 250 C 930 240, 1060 280, 1200 260 S 1450 250, 1700 255;
+          M780 255 C 930 248, 1060 270, 1200 258 S 1450 252, 1700 260;
+          M780 250 C 930 240, 1060 280, 1200 260 S 1450 250, 1700 255" />
+      </path>
+      <path d="M780 360 C 930 345, 1060 385, 1200 365 S 1450 355, 1700 360">
+        <animate attributeName="d" dur="20s" repeatCount="indefinite"
+          values="
+          M780 360 C 930 345, 1060 385, 1200 365 S 1450 355, 1700 360;
+          M780 364 C 930 352, 1060 378, 1200 362 S 1450 358, 1700 364;
+          M780 360 C 930 345, 1060 385, 1200 365 S 1450 355, 1700 360" />
+      </path>
+      <path d="M780 470 C 930 458, 1060 492, 1200 474 S 1450 468, 1700 472">
+        <animate attributeName="d" dur="22s" repeatCount="indefinite"
+          values="
+          M780 470 C 930 458, 1060 492, 1200 474 S 1450 468, 1700 472;
+          M780 474 C 930 465, 1060 486, 1200 472 S 1450 470, 1700 474;
+          M780 470 C 930 458, 1060 492, 1200 474 S 1450 468, 1700 472" />
+      </path>
+    </g>
+  </svg>
 
-    <!-- dark blend so chart still reads clean -->
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-950/40 to-slate-950/60"></div>
+  <!-- center glow -->
+  <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,rgba(113,192,231,0.10),transparent_70%)] blur-3xl"></div>
 
-  </div>
+  <!-- dark blend -->
+  <div class="absolute inset-0 bg-gradient-to-r from-slate-950/20 via-slate-950/45 to-slate-950/70"></div>
+</div>
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div class="max-w-3xl">
           <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Preclinical data</div>
