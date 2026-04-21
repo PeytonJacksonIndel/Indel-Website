@@ -10,24 +10,56 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ADD THIS RIGHT HERE -->
-
+  <!-- ANIMATIONS -->
   <style>
 
+    /* slow platform rotation */
     @keyframes rotateSlow {
-
       from { transform: rotate(0deg); }
-
       to { transform: rotate(360deg); }
-
     }
 
     .animate-rotate-slow {
-
       animation: rotateSlow 140s linear infinite;
-
       transform-origin: center center;
+    }
 
+    /* premium pulse (better than Tailwind ping) */
+    @keyframes platformPulse {
+      0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.35;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+      }
+    }
+
+    .animate-platform-pulse {
+      animation: platformPulse 6s ease-out infinite;
+    }
+
+    /* softer secondary ambient pulse */
+    @keyframes platformPulseSoft {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.12;
+      }
+      50% {
+        opacity: 0.22;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
+      }
+    }
+
+    .animate-platform-pulse-soft {
+      animation: platformPulseSoft 10s ease-in-out infinite;
     }
 
   </style>
@@ -276,14 +308,18 @@
   <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
     <div class="relative animate-rotate-slow">
 
-      <!-- glow -->
-      <div class="absolute inset-0 rounded-full bg-[rgba(113,192,231,0.12)] blur-3xl scale-[1.2]"></div>
+      <!-- dimmer glow -->
+      <div class="absolute inset-0 rounded-full bg-[rgba(113,192,231,0.08)] blur-3xl scale-[1.15]"></div>
+
+      <!-- pulsing center -->
+     <div class="absolute left-1/2 top-1/2 h-28 w-28 rounded-full border border-[rgba(113,192,231,0.22)] animate-platform-pulse"></div>
+      <div class="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(113,192,231,0.12)] animate-pulse"></div>
 
       <!-- image -->
       <img 
         src="platform_png.png"
         alt=""
-        class="relative w-[900px] max-w-none opacity-[0.16] mix-blend-screen"
+        class="relative w-[900px] max-w-none opacity-[0.11] mix-blend-screen"
       />
 
     </div>
