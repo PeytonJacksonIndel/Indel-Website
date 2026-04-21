@@ -754,41 +754,101 @@
       </div>
     </section>
 
-    <!-- TIMELINE -->
-    <section id="timeline" class="relative border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
-      <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div class="max-w-3xl">
-          <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Development Timeline</div>
-          <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Lead program advancing toward IND with expansion beyond TNBC
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-300">
-            TNBC is the lead entry point, with cancer subtype expansion following and an IND objective in 2028 anchored by validation, safety, and manufacturing milestones.
-          </p>
-        </div>
+<!-- ========================================================= -->
+<!-- ================= DEVELOPMENT TIMELINE ================= -->
+<!-- ========================================================= -->
+<section id="timeline" class="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
 
-        <div class="mt-10 h-px w-40 bg-gradient-to-r from-[rgb(113,192,231)] to-transparent"></div>
+  <!-- BACKGROUND IMAGE -->
+  <div class="absolute inset-0 -z-20">
+    <img
+      src="development.png"
+      alt=""
+      class="h-full w-full object-cover opacity-[0.18] animate-timeline-drift"
+    />
+  </div>
 
-        <div class="mt-14 grid gap-6 lg:grid-cols-4">
-          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-            <div class="text-xl font-semibold text-white">Discovery</div>
-            <p class="mt-4 text-sm leading-7 text-slate-300">TP53 expression restored, in vitro TNBC efficacy established, and first in vivo efficacy demonstrated.</p>
-          </div>
-          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-            <div class="text-xl font-semibold text-white">Preclinical</div>
-            <p class="mt-4 text-sm leading-7 text-slate-300">Xenograft efficacy, advanced model validation, dose and durability work, and PK/PD plus safety studies.</p>
-          </div>
-          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-            <div class="text-xl font-semibold text-white">IND-enabling</div>
-            <p class="mt-4 text-sm leading-7 text-slate-300">GLP tox studies, CMC and GMP preparation, pre-IND engagement, and lead candidate selection.</p>
-          </div>
-          <div class="rounded-[30px] border border-white/10 bg-white/5 p-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-            <div class="text-xl font-semibold text-white">Clinical path</div>
-            <p class="mt-4 text-sm leading-7 text-slate-300">IND submission target by 2028, followed by Phase 1 development and broader cancer subtype expansion.</p>
-          </div>
-        </div>
+  <!-- OVERLAY FOR READABILITY -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/92 via-slate-950/75 to-slate-950/88"></div>
+
+  <div class="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:px-8">
+
+    <!-- HEADER -->
+    <div class="max-w-3xl">
+      <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">
+        Development timeline
       </div>
-    </section>
+
+      <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        Advancing toward clinical translation
+      </h2>
+
+      <p class="mt-6 text-lg leading-8 text-slate-300">
+        Indel is progressing a focused development strategy designed to translate preclinical signal into clinical readiness.
+      </p>
+    </div>
+
+    <div class="mt-10 h-px w-40 bg-gradient-to-r from-[rgb(113,192,231)] to-transparent"></div>
+
+    <!-- TIMELINE STEPS -->
+    <div class="mt-14 grid gap-6 lg:grid-cols-4">
+
+      <!-- STEP 1 -->
+      <div class="rounded-[28px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+        <div class="text-sm font-semibold uppercase tracking-[0.20em] text-[rgb(113,192,231)]">
+          Stage 1
+        </div>
+        <div class="mt-3 text-xl font-semibold text-white">
+          Platform development
+        </div>
+        <p class="mt-3 text-sm leading-7 text-slate-300">
+          Optimization of delivery system, formulation design, and foundational platform architecture.
+        </p>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="rounded-[28px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+        <div class="text-sm font-semibold uppercase tracking-[0.20em] text-[rgb(113,192,231)]">
+          Stage 2
+        </div>
+        <div class="mt-3 text-xl font-semibold text-white">
+          Preclinical validation
+        </div>
+        <p class="mt-3 text-sm leading-7 text-slate-300">
+          Demonstration of efficacy signal across TNBC and additional TP53-mutant cancer models.
+        </p>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="rounded-[28px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+        <div class="text-sm font-semibold uppercase tracking-[0.20em] text-[rgb(113,192,231)]">
+          Stage 3
+        </div>
+        <div class="mt-3 text-xl font-semibold text-white">
+          IND-enabling studies
+        </div>
+        <p class="mt-3 text-sm leading-7 text-slate-300">
+          Safety, biodistribution, and manufacturing readiness to support regulatory submission.
+        </p>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="rounded-[28px] border border-white/10 bg-white/[0.05] p-6 backdrop-blur shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+        <div class="text-sm font-semibold uppercase tracking-[0.20em] text-[rgb(113,192,231)]">
+          Stage 4
+        </div>
+        <div class="mt-3 text-xl font-semibold text-white">
+          Clinical translation
+        </div>
+        <p class="mt-3 text-sm leading-7 text-slate-300">
+          Advancement into early clinical studies in TNBC with potential expansion into additional solid tumors.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- TEAM -->
     <section id="team" class="relative border-t border-white/8">
