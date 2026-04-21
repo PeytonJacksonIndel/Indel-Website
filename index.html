@@ -10,10 +10,10 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ANIMATIONS -->
   <style>
-
-    /* slow platform rotation */
+    /* =========================================================
+       ROTATION
+    ========================================================= */
     @keyframes rotateSlow {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
@@ -24,7 +24,9 @@
       transform-origin: center center;
     }
 
-    /* premium pulse (better than Tailwind ping) */
+    /* =========================================================
+       PREMIUM PLATFORM PULSE
+    ========================================================= */
     @keyframes platformPulse {
       0% {
         transform: translate(-50%, -50%) scale(0.9);
@@ -43,7 +45,6 @@
       animation: platformPulse 6s ease-out infinite;
     }
 
-    /* softer secondary ambient pulse */
     @keyframes platformPulseSoft {
       0% {
         transform: translate(-50%, -50%) scale(1);
@@ -62,6 +63,44 @@
       animation: platformPulseSoft 10s ease-in-out infinite;
     }
 
+    /* =========================================================
+       DATA SECTION CHAOS → ORDER BACKGROUND
+    ========================================================= */
+    @keyframes waveFlow {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-200px); }
+    }
+
+    @keyframes waveCalm {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-120px); }
+    }
+
+    .wave-chaos {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(113,192,231,0.11) 0px,
+          rgba(113,192,231,0.11) 2px,
+          transparent 2px,
+          transparent 14px
+        );
+      animation: waveFlow 30s linear infinite;
+      filter: blur(1.5px);
+    }
+
+    .wave-calm {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(113,192,231,0.16) 0px,
+          rgba(113,192,231,0.16) 1px,
+          transparent 1px,
+          transparent 18px
+        );
+      animation: waveCalm 45s linear infinite;
+      filter: blur(0.5px);
+    }
   </style>
 
 </head>
@@ -382,7 +421,23 @@
     <!-- ========================================================= -->
     <!-- ========================== DATA ======================== -->
     <!-- ========================================================= -->
-    <section id="data" class="relative border-t border-white/8">
+    <section id="data" class="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.00))]">
+        <!-- CHAOS → ORDER BACKGROUND -->
+  <div class="absolute inset-0 -z-20 overflow-hidden">
+
+    <!-- left chaotic motion -->
+    <div class="absolute inset-y-0 left-0 w-1/2 wave-chaos opacity-40"></div>
+
+    <!-- right controlled motion -->
+    <div class="absolute inset-y-0 right-0 w-1/2 wave-calm opacity-30"></div>
+
+    <!-- center glow -->
+    <div class="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,rgba(113,192,231,0.10),transparent_70%)] blur-3xl"></div>
+
+    <!-- dark blend so chart still reads clean -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-slate-950/70 to-slate-950/90"></div>
+
+  </div>
       <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div class="max-w-3xl">
           <div class="text-sm font-semibold uppercase tracking-[0.25em] text-[rgb(113,192,231)]">Preclinical data</div>
